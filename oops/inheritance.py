@@ -23,3 +23,29 @@ class Dog(Animal):
 
 dog = Dog("Fantya")
 dog.speak()
+
+#  hybrid inheritance 
+class A:
+    def __init__(self, name):
+        self.name = name
+    
+    def greet(self):
+        print("Hello from class A")
+
+class B(A):
+    def greet(self):
+        print("Hello From the class B")
+        super().greet()
+
+class C(A):
+    def greet(self):
+        print("Hello from the class C")
+        super().greet()
+
+class D(B, C):
+    def greet(self):
+        print("Hello from the class D")
+        super().greet()
+
+obj = D("Don")
+obj.greet()
