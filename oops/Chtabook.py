@@ -6,19 +6,19 @@ class Chatbook:
         self.menu()
 
     def menu(self):
-        userInput = input("""Enter your input here !!
+        userinput = input("""Enter your input here !!
                           1. For the signup
                           2. For the sign in
                           3. For the message to a friend
                           4. For the post a picture
                           5. For the exit""")
-        if userInput=='1':
+        if userinput=='1':
             self.signup()
-        elif userInput=='2':
+        elif userinput=='2':
             self.signin()
-        elif userInput=='3':
+        elif userinput=='3':
             self.message()
-        elif userInput=='4':
+        elif userinput=='4':
             self.post()
         else:
             exit()
