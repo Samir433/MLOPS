@@ -1,9 +1,32 @@
 class Chatbook:
+    __user_id = 1
+
     def __init__(self):
         self.username = ''
         self.password = ''
+        self.__name = 'Private Name'
+        self.id = Chatbook.__user_id 
+        Chatbook.__user_id += 1
         self.loggedin = False
-        self.menu()
+        # self.menu()
+
+    # getter 
+    def get_name(self):
+        return self.__name
+    
+    # setter
+    def set_name(self, name):
+        self.__name = name
+    
+    # static methods setter and getter
+    @staticmethod
+    def get_id():
+        return Chatbook.__user_id
+    
+    @staticmethod
+    def set_id(val):
+        Chatbook.__user_id = val
+    
 
     def menu(self):
         userinput = input("""Enter your input here !!
@@ -65,4 +88,3 @@ class Chatbook:
             print("Please first signin for that your need to press 2")   
             self.menu()
 
-obj = Chatbook()
