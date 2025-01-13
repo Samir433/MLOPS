@@ -1,5 +1,3 @@
-# Simple inheritance
-
 # parent class
 class Animal:
     def __init__(self, name):
